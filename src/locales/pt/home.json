@@ -3,5 +3,11 @@
     "metadata": {
         "title": "Matheus N. Andrade // Desenvolvedor FullStack",
         "description": "NextJS | React | TypeScript | JavaScript | PHP"
+    },
+    "hero": {
+        "profileImgAlt": "Foto de perfil de Matheus",
+        "handHelloLabel": "Uma mãozinha acenando",
+        "hello": "Olá, eu sou",
+        "developer": "Desenvolvedor FullStack"
     }
 }

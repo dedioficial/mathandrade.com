@@ -1,0 +1,60 @@
+.header {
+  background-image: url("/images/background/header.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+.avatar {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.h1 {
+  text-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.hand_hello {
+  display: inline-block;
+  animation: handHi ease 2s infinite;
+  transform-origin: 50% 100%;
+}
+
+@keyframes handHi {
+  0% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1281px) {
+  .header {
+    background-size: 35%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .name_letter_spacer {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .header {
+    background-size: 30%;
+  }
+}
+
+.name_letter {
+  display: inline-block;
+  transition: color 1s ease;
+  @apply text-secondary;
+  @apply cursor-default;
+}
+
+@media screen and (max-width: 768px) {
+  .name_letter_space_last {
+    display: block;
+  }
+}

@@ -1,10 +1,11 @@
+import Header from "@/components/ui/Header";
 import initTranslations from "@/locales/i18n";
 import { Poppins } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
 
 const poppinsFont = Poppins({
-  weight: ["400", "500", "700", "900"],
+  weight: ["400", "500", "600", "700", "900"],
   subsets: ["latin"],
 });
 
@@ -30,6 +31,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
   return (
     <html lang={t("htmlLang")}>
       <body className={`${poppinsFont.className} antialiased`}>
+        <Header locale={locale} />
         <main>{children}</main>
       </body>
     </html>

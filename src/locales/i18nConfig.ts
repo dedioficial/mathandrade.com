@@ -4,3 +4,5 @@ const i18nConfig = {
 };
 
 export default i18nConfig;
+
+export type LocaleParam = { locale: "en" | "pt" };
