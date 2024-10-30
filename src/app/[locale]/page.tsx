@@ -1,3 +1,4 @@
+import SectionAbout from "@/components/pages/home/SectionAbout";
 import SectionHero from "@/components/pages/home/SectionHero";
 import initTranslations from "@/locales/i18n";
 
@@ -12,6 +13,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
   return (
     <>
       <SectionHero t={t} />
+      <SectionAbout t={t} />
     </>
   );
 }

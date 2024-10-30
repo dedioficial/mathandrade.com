@@ -9,5 +9,9 @@
         "handHelloLabel": "A hand waving",
         "hello": "Hello, I am",
         "developer": "FullStack Developer"
+    },
+    "about": {
+        "heading": "Who am I?",
+        "paragraph": "Self-taught developer, 30 years old, I started coding at fourteen just for fun, and I ended up falling in love with the profession. Focused on web application development, I am currently seeking new challenges in creating applications, websites, and digital products."
     }
 }

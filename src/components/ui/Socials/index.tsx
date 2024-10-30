@@ -13,16 +13,18 @@ const socialLinks = [
   },
 ];
 
-const Socials = () => {
+const Socials = ({ className }: { className?: string }) => {
   return (
     <>
-      <ul className="flex gap-2 items-center justify-center order-2 md:ms-auto">
+      <ul
+        className={`flex gap-2 items-center justify-center order-2 md:ms-auto text-primary text-xl ${className}`}
+      >
         {socialLinks.map((link, i) => (
           <li key={i}>
             <Link
               href={link.href}
               aria-label={link.alt}
-              className="text-primary text-xl rubberBand inline-block"
+              className="rubberBand inline-block"
               title={link.alt}
             >
               {link.icon}

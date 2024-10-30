@@ -36,7 +36,7 @@ const NameSplitted = () => {
 
   return (
     <h1
-      className={`name font-semibold md:text-7xl text-5xl ${CSS.h1} text-center`}
+      className={`name font-semibold md:text-7xl text-5xl ${CSS.h1} text-center bg-white bg-opacity-70 backdrop-blur-sm`}
     >
       {nameLetters.map((letter, i) => (
         <Fragment key={i}>{letter}</Fragment>

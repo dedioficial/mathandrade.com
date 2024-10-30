@@ -9,5 +9,9 @@
         "handHelloLabel": "Uma mãozinha acenando",
         "hello": "Olá, eu sou",
         "developer": "Desenvolvedor FullStack"
+    },
+    "about": {
+        "heading": "Quem sou eu?",
+        "paragraph": "Desenvolvedor autodidata de 30 anos, comecei a codar aos quatorze anos por brincadeira, e acabei me apaixonando pela profissão. Focado em desenvolvimento de aplicações para a web, hoje busco novos desafios na criação de aplicações, sites, e produtos digitais."
     }
 }
