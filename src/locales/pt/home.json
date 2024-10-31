@@ -24,5 +24,17 @@
             "paragraph": "Minha principal preocupação server-side é segurança dos dados, mantendo a otimização para o melhor UX."
         },
         "stars": "estrelas"
+    },
+    "portfolio": {
+        "heading": "Veja o quê eu já fiz",
+        "paragraph": "Confira abaixo alguns dos projetos que já realizei que estão em produção!",
+        "button": "dar uma conferida",
+        "checkDemo": "confira a demo",
+        "descriptions": {
+            "streamar": "Plataforma de crowd funding voltada para criadores de conteúdo e influenciadores da área de live streams.",
+            "abn": "Além do site da empresa, desenvolvi o sistema de gestão empresarial personalizado especialmente para as necessidades dela.",
+            "aleta": "Trabalho juntamente com a agência para atender seus clientes, provendo mão-de-obra para manutenção e criação de sites e servidores.",
+            "italifood": "A pedido de um restaurante (NDA), criei uma aplicação web focada em receber pedidos online de seus clientes."
+        }
     }
 }

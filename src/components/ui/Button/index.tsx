@@ -9,6 +9,7 @@ export interface ButtonProps extends ButtonOrLink {
   fnMode?: boolean;
   asLink?: boolean;
   href?: string;
+  target?: string;
 }
 
 const Button = ({
@@ -23,11 +24,15 @@ const Button = ({
 
   const commonChildren = (
     <>
-      {fnMode && <span className="text-blue-500">fn</span>}
+      {fnMode && (
+        <span className="text-blue-500" aria-hidden>
+          fn
+        </span>
+      )}
       <span>
-        {fnMode && "_"}
+        {fnMode && <span aria-hidden>_</span>}
         {children}
-        {fnMode && "()"}
+        {fnMode && <span aria-hidden>()</span>}
       </span>
     </>
   );

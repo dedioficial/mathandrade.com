@@ -24,5 +24,17 @@
             "paragraph": "My primary server-side concern is data security while maintaining optimization for the best UX."
         },
         "stars": "stars"
+    },
+    "portfolio": {
+        "heading": "Made it myself",
+        "paragraph": "Check this great projects that I build it myself, and are in production!",
+        "button": "check it out",
+        "checkDemo": "check the demo out",
+        "descriptions": {
+            "streamar": "Crowdfunding platform focused on content creators and influencers in the live streaming space.",
+            "abn": "In addition to the company's website, I developed a customized business management system specifically tailored to its needs.",
+            "aleta": "I work together with the agency to serve its clients, providing labor for website creation and server maintenance.",
+            "italifood": "At the request of a restaurant (NDA), I created a web application focused on receiving online orders from its customers."
+        }
     }
 }

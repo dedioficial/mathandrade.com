@@ -8,7 +8,7 @@ export interface LanguageArticleProps {
   first: boolean;
   title: string;
   paragraph: string;
-  list: { title: string; stars: number; icon?: ReactNode }[];
+  list: Map<string, { title: string; stars: number; icon?: ReactNode }>;
 }
 
 const LanguageArticle = ({
@@ -37,30 +37,32 @@ const LanguageArticle = ({
           </p>
 
           <ul className="grid grid-cols-3 max-md:grid-cols-2 max-md:gap-4 gap-10 w-full">
-            {list.map((item, i) => (
-              <li
-                key={i}
-                className={`bg-white ${
-                  first ? "backdrop-blur-sm bg-opacity-80" : ""
-                }  shadow-md rounded p-4 gap-4 h-full w-full flex flex-col items-center justify-center text-center`}
-                title={item.title}
-                aria-label={`${item.title} - ${item.stars} ${stars}`}
-              >
-                <span className="text-4xl" aria-hidden>
-                  {item.icon}
-                </span>
+            {[...list].map(([, item]) => {
+              return (
+                <li
+                  key={item.title}
+                  className={`bg-white border ${
+                    first ? "backdrop-blur-sm bg-opacity-80" : ""
+                  }  shadow-md rounded p-4 gap-4 h-full w-full flex flex-col items-center justify-center text-center`}
+                  title={item.title}
+                  aria-label={`${item.title} - ${item.stars} ${stars}`}
+                >
+                  <span className="text-4xl" aria-hidden>
+                    {item.icon}
+                  </span>
 
-                <div className="flex gap-1 items-center" aria-hidden>
-                  {Array(item.stars)
-                    .fill(<FaStar className="text-yellow-400" />)
-                    .map((s) => s)}
+                  <div className="flex gap-1 items-center" aria-hidden>
+                    {Array(item.stars)
+                      .fill(<FaStar className="text-yellow-400" />)
+                      .map((s) => s)}
 
-                  {Array(5 - item.stars)
-                    .fill(<FaRegStar className="text-yellow-400" />)
-                    .map((s) => s)}
-                </div>
-              </li>
-            ))}
+                    {Array(5 - item.stars)
+                      .fill(<FaRegStar className="text-yellow-400" />)
+                      .map((s) => s)}
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </article>
       </div>
