@@ -1,0 +1,33 @@
+.section {
+  @apply relative;
+  @apply grid;
+  @apply grid-cols-2;
+  @apply max-lg:grid-cols-1;
+  @apply !py-0;
+}
+
+.front,
+.back {
+  background-size: 40%;
+  background-repeat: no-repeat;
+  @apply py-24;
+}
+
+.front {
+  @apply bg-[#fff];
+  background-image: url("/images/background/languages.png");
+  background-position: bottom left;
+}
+
+.back {
+  @apply bg-[#111e20];
+  background-image: url("/images/background/languages-inverted.png");
+  background-position: bottom right;
+}
+
+@media not all and (min-width: 1024px) {
+  .back {
+    top: 50%;
+    width: 100%;
+  }
+}

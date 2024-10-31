@@ -10,11 +10,15 @@ const NameSplitted = () => {
     if (name[i] == "" || name[i] == " ") {
       if (count_spacer == 0) {
         nameLetters.push(
-          <span className={`${CSS.name_letter_spacer} md:mx-2 mx-1`}></span>
+          <span
+            aria-hidden
+            className={`${CSS.name_letter_spacer} md:mx-2 mx-1`}
+          ></span>
         );
       } else {
         nameLetters.push(
           <span
+            aria-hidden
             className={`${CSS.name_letter_spacer} ${CSS.name_letter_space_last} md:mx-2 mx-1`}
           ></span>
         );
@@ -24,12 +28,16 @@ const NameSplitted = () => {
     }
 
     nameLetters.push(
-      <span className={`${CSS.name_letter} rubberBand`}>{name[i]}</span>
+      <span aria-hidden className={`${CSS.name_letter} rubberBand`}>
+        {name[i]}
+      </span>
     );
 
     if (i == name.length - 1) {
       nameLetters.push(
-        <span className={`${CSS.name_letter} rubberBand`}>,</span>
+        <span aria-hidden className={`${CSS.name_letter} rubberBand`}>
+          ,
+        </span>
       );
     }
   }
@@ -41,6 +49,7 @@ const NameSplitted = () => {
       {nameLetters.map((letter, i) => (
         <Fragment key={i}>{letter}</Fragment>
       ))}
+      <span className="sr-only">Matheus N. Andrade</span>
     </h1>
   );
 };

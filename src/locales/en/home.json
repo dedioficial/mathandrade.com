@@ -13,5 +13,16 @@
     "about": {
         "heading": "Who am I?",
         "paragraph": "Self-taught developer, 30 years old, I started coding at fourteen just for fun, and I ended up falling in love with the profession. Focused on web application development, I am currently seeking new challenges in creating applications, websites, and digital products."
+    },
+    "languages": {
+        "heading": "What do I code?",
+        "langHeading": "Languages",
+        "frontend": {
+            "paragraph": "Always aiming for clean and pleasant visuals, maintaining cohesion with the visual identity."
+        },
+        "backend": {
+            "paragraph": "My primary server-side concern is data security while maintaining optimization for the best UX."
+        },
+        "stars": "stars"
     }
 }

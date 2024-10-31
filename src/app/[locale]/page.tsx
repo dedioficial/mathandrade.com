@@ -1,5 +1,6 @@
 import SectionAbout from "@/components/pages/home/SectionAbout";
 import SectionHero from "@/components/pages/home/SectionHero";
+import SectionLanguages from "@/components/pages/home/SectionLanguages";
 import initTranslations from "@/locales/i18n";
 
 interface LocalePageProps {
@@ -14,6 +15,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
     <>
       <SectionHero t={t} />
       <SectionAbout t={t} />
+      <SectionLanguages t={t} />
     </>
   );
 }
