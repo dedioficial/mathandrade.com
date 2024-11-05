@@ -1,0 +1,31 @@
+{
+    "heading": "Reach me, and let's work together!",
+    "name": {
+        "label": "Name",
+        "placeholder": "How should I call you?"
+    },
+    "email": {
+        "label": "Email",
+        "placeholder": "Your e-mail address?"
+    },
+    "subject": {
+        "label": "Subject",
+        "placeholder": "Briefly describe your project, idea, or proposal."
+    },
+    "send": "Submit email",
+    "success": {
+        "title": "Thank you for reaching me!",
+        "message": "I will be getting in touch as soon as possible!"
+    },
+    "error": {
+        "title": "Oops, it looks like there was an error.",
+        "message": "Please get in touch directly via email:"
+    },
+    "fieldErrors": {
+        "required": "This field is required."
+    },
+    "emailBody": {
+        "subject": "Website contact"
+    },
+    "formAriaLabel": "Contact form"
+}

@@ -1,0 +1,31 @@
+{
+    "heading": "Fale comigo, e vamos trabalhar juntos!",
+    "name": {
+        "label": "Nome",
+        "placeholder": "Como devo lhe chamar?"
+    },
+    "email": {
+        "label": "Email",
+        "placeholder": "Seu e-mail para contato?"
+    },
+    "subject": {
+        "label": "Assunto",
+        "placeholder": "Descreva brevemente seu projeto, idéia, ou proposta."
+    },
+    "send": "Enviar contato",
+    "success": {
+        "title": "Obrigado por entrar em contato!",
+        "message": "Estarei retornando o mais rápido possível!"
+    },
+    "error": {
+        "title": "Oops, parece que houve um erro no envio.",
+        "message": "Por favor, entre em contato diretamente pelo e-mail:"
+    },
+    "fieldErrors": {
+        "required": "Este campo é obrigatório."
+    },
+    "emailBody": {
+        "subject": "Contato pelo site"
+    },
+    "formAriaLabel": "Formulário de contato"
+}

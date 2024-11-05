@@ -53,12 +53,16 @@ const LanguageArticle = ({
 
                   <div className="flex gap-1 items-center" aria-hidden>
                     {Array(item.stars)
-                      .fill(<FaStar className="text-yellow-400" />)
-                      .map((s) => s)}
+                      .fill(null)
+                      .map((_, i) => (
+                        <FaStar className="text-yellow-400" key={i} />
+                      ))}
 
                     {Array(5 - item.stars)
-                      .fill(<FaRegStar className="text-yellow-400" />)
-                      .map((s) => s)}
+                      .fill(null)
+                      .map((_, i) => (
+                        <FaRegStar className="text-yellow-400" key={i} />
+                      ))}
                   </div>
                 </li>
               );

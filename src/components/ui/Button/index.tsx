@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ButtonHTMLAttributes, LinkHTMLAttributes, ReactNode } from "react";
 
@@ -20,19 +22,22 @@ const Button = ({
   href,
   ...props
 }: ButtonProps) => {
-  const commonClasses = `px-4 py-2 flex gap-1 rounded-full items-center justify-center bg-gray-100 text-center hover:bg-gray-300 transition-all text-black ${className}`;
+  const commonClasses = `px-4 py-2 flex gap-2 rounded-full items-center justify-center bg-gray-100 text-center hover:bg-gray-300 transition-all text-black ${className}`;
 
   const commonChildren = (
     <>
       {fnMode && (
-        <span className="text-blue-500" aria-hidden>
+        <span className="text-blue-500 text-opacity-60" aria-hidden>
           fn
         </span>
       )}
       <span>
-        {fnMode && <span aria-hidden>_</span>}
         {children}
-        {fnMode && <span aria-hidden>()</span>}
+        {fnMode && (
+          <span className="text-blue-500 text-opacity-60" aria-hidden>
+            ()
+          </span>
+        )}
       </span>
     </>
   );
