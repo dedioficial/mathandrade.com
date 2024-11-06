@@ -9,6 +9,7 @@ export interface LanguageArticleProps {
   title: string;
   paragraph: string;
   list: Map<string, { title: string; stars: number; icon?: ReactNode }>;
+  listAriaLabel: string;
 }
 
 const LanguageArticle = ({
@@ -16,6 +17,7 @@ const LanguageArticle = ({
   paragraph,
   first,
   list,
+  listAriaLabel,
   stars,
 }: LanguageArticleProps) => {
   return (
@@ -36,7 +38,10 @@ const LanguageArticle = ({
             {paragraph}
           </p>
 
-          <ul className="grid grid-cols-3 max-md:grid-cols-2 max-md:gap-4 gap-10 w-full">
+          <ul
+            className="grid grid-cols-3 max-md:grid-cols-2 max-md:gap-4 gap-10 w-full"
+            aria-label={listAriaLabel}
+          >
             {[...list].map(([, item]) => {
               return (
                 <li

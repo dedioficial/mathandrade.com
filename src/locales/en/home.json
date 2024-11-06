@@ -18,9 +18,11 @@
         "heading": "What do I code?",
         "langHeading": "Languages",
         "frontend": {
+            "listAriaLabel": "Front-end technologies",
             "paragraph": "Always aiming for clean and pleasant visuals, maintaining cohesion with the visual identity."
         },
         "backend": {
+            "listAriaLabel": "Back-end technologies",
             "paragraph": "My primary server-side concern is data security while maintaining optimization for the best UX."
         },
         "stars": "stars"

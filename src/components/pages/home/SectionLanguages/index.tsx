@@ -11,11 +11,13 @@ const SectionLanguages = async () => {
       title: "Front-End",
       paragraph: t("languages.frontend.paragraph"),
       list: languaguesList.front,
+      listAriaLabel: t("languages.frontend.listAriaLabel"),
     },
     {
       title: "Back-End",
       paragraph: t("languages.backend.paragraph"),
       list: languaguesList.back,
+      listAriaLabel: t("languages.backend.listAriaLabel"),
     },
   ];
 

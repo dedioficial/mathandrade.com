@@ -18,9 +18,11 @@
         "heading": "O que eu codo?",
         "langHeading": "Linguagens",
         "frontend": {
+            "listAriaLabel": "Tecnologias Front-end",
             "paragraph": "Sempre buscando visuais limpos e agradáveis, mantendo a coesia com a identidade visual."
         },
         "backend": {
+            "listAriaLabel": "Tecnologias Back-end",
             "paragraph": "Minha principal preocupação server-side é segurança dos dados, mantendo a otimização para o melhor UX."
         },
         "stars": "estrelas"
