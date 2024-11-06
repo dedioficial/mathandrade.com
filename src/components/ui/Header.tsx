@@ -30,7 +30,7 @@ const Header = async () => {
 
         <Navbar navLinks={navLinksList} />
 
-        <Socials />
+        <Socials className="order-2" />
       </header>
     </>
   );

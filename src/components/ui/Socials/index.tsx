@@ -17,7 +17,7 @@ const Socials = ({ className }: { className?: string }) => {
   return (
     <>
       <ul
-        className={`flex gap-2 items-center justify-center order-2 md:ms-auto text-primary text-xl ${className}`}
+        className={`flex gap-2 items-center justify-center md:ms-auto text-primary text-xl ${className}`}
       >
         {socialLinks.map((link, i) => (
           <li key={i}>
