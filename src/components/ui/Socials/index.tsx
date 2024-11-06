@@ -1,23 +1,33 @@
+import initTranslations from "@/locales/i18n";
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-const socialLinks = [
-  {
-    icon: <FaGithub />,
-    alt: "Check my GitHub",
-    href: "https://github.com/dedioficial",
-  },
-  {
-    icon: <FaLinkedinIn />,
-    alt: "Check my Linkedin",
-    href: "https://www.linkedin.com/in/math-andrade/",
-  },
-];
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
-const Socials = ({ className }: { className?: string }) => {
+const Socials = async ({ className }: { className?: string }) => {
+  const { t } = await initTranslations(["socials"]);
+
+  const socialLinks = [
+    {
+      icon: <FaGithub />,
+      alt: t("github"),
+      href: "https://github.com/dedioficial",
+    },
+    {
+      icon: <FaLinkedinIn />,
+      alt: t("linkedin"),
+      href: "https://www.linkedin.com/in/math-andrade/",
+    },
+    {
+      icon: <FaInstagram />,
+      alt: t("instagram"),
+      href: "https://www.instagram.com/deadmat94/",
+    },
+  ];
+
   return (
     <>
       <ul
         className={`flex gap-2 items-center justify-center md:ms-auto text-primary text-xl ${className}`}
+        aria-label={t("socialsAriaLabel")}
       >
         {socialLinks.map((link, i) => (
           <li key={i}>
