@@ -10,7 +10,6 @@ const SectionHero = async () => {
   return (
     <>
       <section
-        role="region"
         className={`flex flex-col py-32 max-md:pb-24 min-h-screen gap-12 justify-center items-center ${CSS.header}`}
       >
         <Image

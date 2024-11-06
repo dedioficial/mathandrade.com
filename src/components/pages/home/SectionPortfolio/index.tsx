@@ -9,7 +9,7 @@ const SectionPortfolio = async () => {
 
   return (
     <>
-      <section role="region" id="portfolio" className="pt-0">
+      <section id="portfolio" className="pt-0">
         <div className="bg-primary text-white py-24 -mb-10">
           <div className="max-w-4xl text-center flex flex-col gap-10 m-auto px-4 ">
             <h2 className="!text-white">{t("portfolio.heading")}</h2>

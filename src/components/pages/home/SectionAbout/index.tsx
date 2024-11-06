@@ -6,7 +6,7 @@ const SectionAbout = async () => {
 
   return (
     <>
-      <section role="region" id="about" className="bg-primary text-white">
+      <section id="about" className="bg-primary text-white">
         <div className="max-w-4xl text-center flex flex-col gap-10 m-auto px-4">
           <h2>{t("about.heading")}</h2>
           <p>{t("about.paragraph")}</p>

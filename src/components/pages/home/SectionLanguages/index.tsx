@@ -23,7 +23,7 @@ const SectionLanguages = async () => {
 
   return (
     <>
-      <section role="region" id="languages" className={CSS.section}>
+      <section id="languages" className={CSS.section}>
         <h2 className="sr-only">{t("languages.heading")}</h2>
 
         {languagesContents.map((content, i) => (

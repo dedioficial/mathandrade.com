@@ -22,7 +22,6 @@ const PortfolioCard = ({
   return (
     <>
       <li
-        role="article"
         className="bg-white rounded shadow-xl p-12 flex items-center flex-col gap-10 text-gray-700 border"
         aria-label={`${title}`}
       >

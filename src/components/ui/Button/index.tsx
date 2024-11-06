@@ -27,14 +27,14 @@ const Button = ({
   const commonChildren = (
     <>
       {fnMode && (
-        <span className="text-blue-500 text-opacity-60" aria-hidden>
+        <span className="text-blue-400" aria-hidden>
           fn
         </span>
       )}
       <span>
         {children}
         {fnMode && (
-          <span className="text-blue-500 text-opacity-60" aria-hidden>
+          <span className="text-blue-400" aria-hidden>
             ()
           </span>
         )}

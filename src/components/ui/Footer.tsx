@@ -20,10 +20,10 @@ const Footer = async () => {
 
         <Socials className="!text-white !text-4xl m-auto" />
 
-        <p
-          className="flex flex-col items-center gap-2 m-auto"
-          aria-label={`${t("madeAria")} NextJS, TypeScript and Tailwind`}
-        >
+        <p className="flex flex-col items-center gap-2 m-auto">
+          <span className="sr-only">{`${t(
+            "madeAria"
+          )} NextJS, TypeScript and Tailwind`}</span>
           <span aria-hidden>{t("made")}</span>
           <span aria-hidden className="flex gap-2 items-center">
             <RiNextjsLine
