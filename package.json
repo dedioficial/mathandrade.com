@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.16",
+    "framer-motion": "^11.11.11",
     "i18next": "^23.16.4",
     "i18next-resources-to-backend": "^1.2.1",
     "next": "15.0.2",

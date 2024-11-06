@@ -1,9 +1,8 @@
-import Header from "@/components/ui/Header";
+import Footer from "@/components/ui/Footer";
 import initTranslations from "@/locales/i18n";
 import { Poppins } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
-import Footer from "@/components/ui/Footer";
 
 const poppinsFont = Poppins({
   weight: ["400", "500", "600", "700", "900"],
@@ -29,7 +28,6 @@ export default async function RootLayout({ children }: LayoutProps) {
   return (
     <html lang={t("htmlLang")}>
       <body className={`${poppinsFont.className} antialiased`}>
-        <Header />
         <main>{children}</main>
         <Footer />
       </body>
