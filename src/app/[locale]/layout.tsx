@@ -11,12 +11,10 @@ const poppinsFont = Poppins({
 
 interface LayoutProps {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params }: LayoutProps) {
-  const { locale } = await params;
-  const { t } = await initTranslations(locale, ["home"]);
+export async function generateMetadata() {
+  const { t } = await initTranslations(["home"]);
 
   return {
     title: t("metadata.title"),
@@ -24,14 +22,13 @@ export async function generateMetadata({ params }: LayoutProps) {
   };
 }
 
-export default async function RootLayout({ children, params }: LayoutProps) {
-  const { locale } = await params;
-  const { t } = await initTranslations(locale, ["home"]);
+export default async function RootLayout({ children }: LayoutProps) {
+  const { t } = await initTranslations(["home"]);
 
   return (
     <html lang={t("htmlLang")}>
       <body className={`${poppinsFont.className} antialiased`}>
-        <Header locale={locale} />
+        <Header />
         <main>{children}</main>
       </body>
     </html>

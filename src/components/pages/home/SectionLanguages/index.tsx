@@ -1,13 +1,11 @@
-import { TFunction } from "@/locales/types";
+import initTranslations from "@/locales/i18n";
 import LanguageArticle from "./LanguageArticle";
 import languaguesList from "./languagesList";
 import CSS from "./style.module.css";
 
-export interface SectionLanguagesProps {
-  t: TFunction;
-}
+const SectionLanguages = async () => {
+  const { t } = await initTranslations(["home"]);
 
-const SectionLanguages = ({ t }: SectionLanguagesProps) => {
   const languagesContents = [
     {
       title: "Front-End",

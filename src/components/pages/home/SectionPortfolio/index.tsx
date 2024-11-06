@@ -1,14 +1,12 @@
-import { TFunction } from "@/locales/types";
+import initTranslations from "@/locales/i18n";
 import { FaRegHandPointDown } from "react-icons/fa6";
 import PortfolioCard from "./PortfolioCard";
 import portfolioList from "./portfolioList";
 import CSS from "./style.module.css";
 
-export interface SectionPortfolioProps {
-  t: TFunction;
-}
+const SectionPortfolio = async () => {
+  const { t } = await initTranslations(["home"]);
 
-const SectionPortfolio = ({ t }: SectionPortfolioProps) => {
   return (
     <>
       <section role="region" id="portfolio" className="pt-0 bg-gray-50">

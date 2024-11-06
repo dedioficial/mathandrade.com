@@ -1,11 +1,9 @@
 import Socials from "@/components/ui/Socials";
-import { TFunction } from "@/locales/types";
+import initTranslations from "@/locales/i18n";
 
-export interface SectionAboutProps {
-  t: TFunction;
-}
+const SectionAbout = async () => {
+  const { t } = await initTranslations(["home"]);
 
-const SectionAbout = ({ t }: SectionAboutProps) => {
   return (
     <>
       <section role="region" id="about" className="bg-primary text-white">

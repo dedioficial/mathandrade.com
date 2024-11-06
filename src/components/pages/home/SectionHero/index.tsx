@@ -1,14 +1,12 @@
-import { TFunction } from "@/locales/types";
+import initTranslations from "@/locales/i18n";
 import Image from "next/image";
 import { FaRegHand } from "react-icons/fa6";
 import NameSplitted from "./NameSplitted";
 import CSS from "./style.module.css";
 
-export interface SectionHeroProps {
-  t: TFunction;
-}
+const SectionHero = async () => {
+  const { t } = await initTranslations(["home"]);
 
-const SectionHero = ({ t }: SectionHeroProps) => {
   return (
     <>
       <section

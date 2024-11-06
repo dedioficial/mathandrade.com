@@ -1,9 +1,17 @@
+import initTranslations from "@/locales/i18n";
 import Image from "next/image";
-import TranslationsProvider from "../TranslationProvider";
 import Navbar from "./Navbar";
+import { navLinks } from "./Navbar/linksList";
 import Socials from "./Socials";
 
-const Header = ({ locale }: { locale: string }) => {
+const Header = async () => {
+  const { t } = await initTranslations(["nav"]);
+
+  const navLinksList = navLinks.map((link) => {
+    link.title = t(link.title);
+    return link;
+  });
+
   return (
     <>
       <header className="flex max-md:grid max-md:grid-cols-3 py-6 px-4 max-md:px-10 w-full max-w-7xl m-auto items-center gap-6 absolute top-0 left-0 right-0 max-md:gap-y-0">
@@ -20,9 +28,7 @@ const Header = ({ locale }: { locale: string }) => {
           }}
         />
 
-        <TranslationsProvider locale={locale} namespaces={["nav"]}>
-          <Navbar />
-        </TranslationsProvider>
+        <Navbar navLinks={navLinksList} />
 
         <Socials />
       </header>

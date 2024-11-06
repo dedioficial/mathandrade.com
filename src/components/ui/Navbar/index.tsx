@@ -1,32 +1,16 @@
 "use client";
 
 import { useRef } from "react";
-import { useTranslation } from "react-i18next";
 import { FaBars } from "react-icons/fa";
 import Button from "../Button";
+import { navLink } from "./linksList";
 
-const links = [
-  {
-    title: "about",
-    href: "#about",
-  },
-  {
-    title: "languages",
-    href: "#languages",
-  },
-  {
-    title: "portfolio",
-    href: "#portfolio",
-  },
-  {
-    title: "contact",
-    href: "#contact",
-  },
-];
+export interface NavbarProps {
+  navLinks: navLink[];
+}
 
-const Navbar = () => {
+const Navbar = ({ navLinks }: NavbarProps) => {
   const navRef = useRef<HTMLElement>(null);
-  const { t } = useTranslation();
 
   const handleOpenNav = () => {
     if (!navRef.current) return;
@@ -65,7 +49,7 @@ const Navbar = () => {
           className="md:flex max-md:grid max-md:grid-cols-2 gap-4 items-center max-md:py-5"
           id="navlist"
         >
-          {links.map((link, i) => (
+          {navLinks.map((link, i) => (
             <li
               key={i}
               className="max-md:scale-0 max-md:group-[[data-open]]:scale-100 transition-all duration-700"
@@ -73,10 +57,10 @@ const Navbar = () => {
               <Button
                 asLink
                 href={link.href}
-                aria-label={t(link.title)}
+                aria-label={link.title}
                 className="max-md:!text-sm"
               >
-                {t(link.title)}
+                {link.title}
               </Button>
             </li>
           ))}
