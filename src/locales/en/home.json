@@ -2,7 +2,10 @@
     "htmlLang": "en",
     "metadata": {
         "title": "Matheus N. Andrade // FullStack Developer",
-        "description": "NextJS | React | TypeScript | JavaScript | PHP"
+        "description": "FullStack Developer | NextJS | React | TypeScript | JavaScript | PHP",
+        "opengraph": {
+            "locale": "en"
+        }
     },
     "hero": {
         "profileImgAlt": "Matheus' profile picture",
