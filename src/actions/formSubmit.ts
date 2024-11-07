@@ -3,6 +3,7 @@
 import initTranslations from "@/locales/i18n";
 import nodemailer, { TransportOptions } from "nodemailer";
 import { z } from "zod";
+import { DetailedError } from "./CustomError";
 
 export interface ContactFormData {
   name: string;
@@ -62,14 +63,17 @@ export async function onFormSubmit(_: unknown, data: FormData) {
   try {
     const emailStatus = await transporter.sendMail(mailOptions);
 
-    if (emailStatus.rejected.length > 0) throw new Error();
+    if (emailStatus.rejected.length > 0)
+      throw new DetailedError("Fail to send email", emailStatus);
 
     return {
       status: 200,
       fields: null,
       to: emailEnv.to,
     };
-  } catch {
+  } catch (e: unknown) {
+    console.error({ message: "Fail to send email", details: e });
+
     return {
       status: 500,
       fields: null,
