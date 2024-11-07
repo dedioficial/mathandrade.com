@@ -3,7 +3,11 @@
 import { useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import Button from "../Button";
-import { navLink } from "./linksList";
+
+export type navLink = {
+  title: string;
+  href: string;
+};
 
 export interface NavbarProps {
   navLinks: navLink[];

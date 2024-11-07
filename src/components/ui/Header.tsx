@@ -2,7 +2,6 @@ import initTranslations from "@/locales/i18n";
 import * as motion from "framer-motion/client";
 import Image from "next/image";
 import Navbar from "./Navbar";
-import { navLinks } from "./Navbar/linksList";
 import Socials from "./Socials";
 
 interface HeaderProps {
@@ -12,10 +11,24 @@ interface HeaderProps {
 const Header = async ({ animationDelayInSeconds = 0.4 }: HeaderProps) => {
   const { t } = await initTranslations(["nav"]);
 
-  const navLinksList = navLinks.map((link) => {
-    link.title = t(link.title);
-    return link;
-  });
+  const navLinks = [
+    {
+      title: t("about"),
+      href: "#about",
+    },
+    {
+      title: t("languages"),
+      href: "#languages",
+    },
+    {
+      title: t("portfolio"),
+      href: "#portfolio",
+    },
+    {
+      title: t("contact"),
+      href: "#contact",
+    },
+  ];
 
   return (
     <>
@@ -44,7 +57,7 @@ const Header = async ({ animationDelayInSeconds = 0.4 }: HeaderProps) => {
           }}
         />
 
-        <Navbar navLinks={navLinksList} />
+        <Navbar navLinks={navLinks} />
 
         <Socials className="order-2" />
       </motion.header>
